@@ -191,7 +191,7 @@ Principaux groupes d'endpoints :
 
 Projet réalisé en binôme :
 
-- **Ibtihel Gritli** : [Portfolio](ibtihel-gritli.github.io/Ibtihel-Gritl) · [GitHub](https://github.com/Ibtihel-Gritli) · [LinkedIn](https://www.linkedin.com/in/ibtihelle-gritli)
+- **Ibtihel Gritli** : [Portfolio](https://ibtihel-gritli.github.io/Ibtihel-Gritl/) · [GitHub](https://github.com/Ibtihel-Gritli) · [LinkedIn](https://www.linkedin.com/in/ibtihelle-gritli)
 - **Zayneb Ben Aicha**
 
 Encadrement : Dr. Ing. Ghada Feki, Faculté des Sciences de Monastir, 2025-2026.
