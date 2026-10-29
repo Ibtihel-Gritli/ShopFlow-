@@ -19,16 +19,14 @@ ShopFlow met en relation des **vendeurs**, qui publient leurs produits, et des *
 ## Table des matières
 
 1. [Fonctionnalités](#fonctionnalités)
-2. [Aperçu](#aperçu)
-3. [Technologies](#technologies)
-4. [Architecture](#architecture)
-5. [Modèle de données](#modèle-de-données)
-6. [Sécurité](#sécurité)
-7. [Installation](#installation)
-8. [Documentation de l'API](#documentation-de-lapi)
-9. [Difficultés rencontrées](#difficultés-rencontrées)
-10. [Perspectives](#perspectives)
-11. [Auteurs](#auteurs)
+2. [Technologies](#technologies)
+3. [Architecture](#architecture)
+4. [Modèle de données](#modèle-de-données)
+5. [Sécurité](#sécurité)
+6. [Documentation de l'API](#documentation-de-lapi)
+7. [Difficultés rencontrées](#difficultés-rencontrées)
+8. [Perspectives](#perspectives)
+9. [Auteurs](#auteurs)
 
 ---
 
@@ -63,20 +61,6 @@ ShopFlow met en relation des **vendeurs**, qui publient leurs produits, et des *
 ### Avis et notes
 - Avis (note de 1 à 5 et commentaire) **uniquement sur les produits achetés**.
 - Note moyenne calculée automatiquement.
-
----
-
-## Aperçu
-
-<!-- Ajoute tes captures d'écran dans docs/images/ avec ces noms, ou adapte les chemins. -->
-
-| Catalogue | Panier |
-|:---:|:---:|
-| ![Catalogue](docs/images/catalogue.png) | ![Panier](docs/images/panier.png) |
-
-| Passer une commande | Commande confirmée |
-|:---:|:---:|
-| ![Commande](docs/images/commande.png) | ![Confirmation](docs/images/confirmation.png) |
 
 ---
 
@@ -158,41 +142,6 @@ L'authentification est **stateless**, basée sur des JSON Web Tokens (JWT).
 2. Le client envoie l'access token dans l'en-tête `Authorization: Bearer ...`.
 3. Un filtre Spring (`JwtFilter`) valide le token à chaque requête.
 4. Si le token a expiré (réponse 401), le frontend utilise le refresh token pour obtenir un nouvel access token, puis relance la requête automatiquement.
-
----
-
-## Installation
-
-### Prérequis
-- Java 17 ou plus
-- Maven
-- Node.js 18 ou plus
-
-### 1. Cloner le dépôt
-```bash
-git clone https://github.com/Ibtihel-Gritli/ShopFlow-.git
-cd ShopFlow-
-```
-
-### 2. Lancer le backend (port 8080)
-```bash
-cd backend
-mvn spring-boot:run
-```
-La base **H2** est en mémoire : aucune installation de base de données n'est nécessaire en développement. La console H2 est disponible sur `http://localhost:8080/h2-console`.
-
-### 3. Lancer le frontend (port 3000)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Ouvrez ensuite [http://localhost:3000](http://localhost:3000).
-
-> Le frontend appelle l'API sur `http://localhost:8080`. La configuration CORS du backend autorise l'origine `http://localhost:3000`.
-
-### Passer à PostgreSQL (production)
-Remplacez la configuration de la source de données dans `application.properties` par celle de votre base PostgreSQL et ajoutez le driver correspondant dans le `pom.xml`.
 
 ---
 
